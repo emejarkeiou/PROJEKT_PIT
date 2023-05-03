@@ -31,7 +31,7 @@
             <div class="navbar-header">
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: #eee !important;">
-                    Velky Laravel
+                    Markov ToDo List
                 </a>
             </div>
         </div>
