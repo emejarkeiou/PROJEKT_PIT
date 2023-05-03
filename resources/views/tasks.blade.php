@@ -44,14 +44,13 @@
                 </div>
 
                 <div class="panel-body">
-                    <!-- Display Validation Errors -->
                     @include('common.errors')
 
-                    <!-- New Task Form -->
+                    <!-- Nová uloha form -->
                     <form action="{{ url('task')}}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
-                        <!-- Task Name -->
+                        <!-- Uloha Name -->
                         <div class="form-group">
                             <label for="task-name" class="col-sm-3 control-label">Úloha</label>
 
@@ -60,7 +59,7 @@
                             </div>
                         </div>
 
-                        <!-- Add Task Button -->
+                        <!-- Pridať button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-default btn-maro">
@@ -71,7 +70,7 @@
                     </form>
                 </div>
             </div>
-            <!-- Current Tasks -->
+            <!-- Aktualne ulohy -->
             @if (count($tasks) > 0)
                 <div class="panel panel-default bg-dark">
                     <div class="panel-heading bg-dark bg2 text-center">
@@ -89,7 +88,7 @@
                                     <tr>
                                         <td class="table-text">{{ $task->name }}</td>
 
-                                        <!-- Task Delete Button -->
+                                        <!-- Odstranit Button -->
                                         <td>
                                             <form action="{{ url('task/'.$task->id) }}" method="POST">
                                                 {{ csrf_field() }}
